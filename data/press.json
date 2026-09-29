@@ -1,0 +1,44 @@
+{
+  "eyebrow_pt": "NA MÍDIA",
+  "eyebrow_en": "IN THE MEDIA",
+  "title_pt": "Imprensa",
+  "title_en": "Press",
+  "items": [
+    {
+      "source": "Geek Pop News",
+      "title_pt": "Pacto Maldito — novo filme de terror brasileiro",
+      "title_en": "Pacto Maldito — new Brazilian horror film",
+      "url": "https://geekpopnews.com.br/pacto-maldito-conheca-novo-filme-de-terror-brasileiro-com-carol-castro/"
+    },
+    {
+      "source": "Times Brasil",
+      "title_pt": "Terror feito no Brasil e CCXP",
+      "title_en": "Brazilian horror and CCXP",
+      "url": "https://timesbrasil.com.br/entretenimento/terror-feito-no-brasil-tenta-romper-barreiras-de-consumo-com-ajuda-da-ccxp25/"
+    },
+    {
+      "source": "Plano Crítico",
+      "title_pt": "Entrevista sobre Intervenção — É Proibido Morrer",
+      "title_en": "Interview about Intervenção — É Proibido Morrer",
+      "url": "https://www.planocritico.com/entrevista-caio-cobra-e-enio-berwanger-falam-sobre-o-filme-intervencao-e-proibido-morrer/"
+    },
+    {
+      "source": "O Globo",
+      "title_pt": "Carol Castro roda filme de terror de Caio Cobra",
+      "title_en": "Carol Castro shoots Caio Cobra's horror film",
+      "url": "https://oglobo.globo.com/play/noticia/2025/11/18/carol-castro-roda-filme-de-terror-de-caio-cobra.ghtml"
+    },
+    {
+      "source": "Omelete",
+      "title_pt": "Pacto Maldito — terror brasileiro",
+      "title_en": "Pacto Maldito — Brazilian horror",
+      "url": "https://www.omelete.com.br/filmes/pacto-maldito-terror-brasileiro-ccxp-trailer"
+    },
+    {
+      "source": "YouTube",
+      "title_pt": "Vídeo / entrevista",
+      "title_en": "Video / interview",
+      "url": "https://www.youtube.com/watch?v=CHdAbHOpMKQ"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio de Caio Cobra">
+  <title>Caio Cobra — Cinema e escrita</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" id="site-logo" href="#inicio">CAIO COBRA</a>
+  <div class="header-actions">
+    <div class="lang-switch" aria-label="Idioma / Language">
+      <button class="lang-btn active" type="button" data-lang-select="pt">PT</button>
+      <span>/</span>
+      <button class="lang-btn" type="button" data-lang-select="en">EN</button>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </div>
+  <nav class="nav" id="main-nav"></nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-shade"></div>
+    <div class="hero-content" id="hero-content"></div>
+  </section>
+
+  <section class="section" id="direcao">
+    <div class="section-heading" id="films-heading"></div>
+    <div class="films" id="films-list"></div>
+  </section>
+
+  <section class="section section-alt" id="escrita">
+    <div class="section-heading" id="writing-heading"></div>
+    <div id="writing-list"></div>
+  </section>
+
+  <section class="section" id="textos">
+    <div class="section-heading" id="texts-heading"></div>
+    <div class="texts-intro" id="texts-intro"></div>
+    <div class="editorial-list" id="texts-list"></div>
+  </section>
+
+  <section class="section section-alt" id="imprensa">
+    <div class="section-heading" id="press-heading"></div>
+    <div class="press-list" id="press-list"></div>
+  </section>
+
+  <section class="section about" id="sobre">
+    <div class="section-heading" id="about-heading"></div>
+    <div class="about-portrait" id="about-portrait"></div>
+    <div class="about-copy" id="about-copy"></div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div id="contact-content"></div>
+  </section>
+</main>
+
+<footer><span>© <span id="year"></span> <span id="footer-name">Caio Cobra</span></span></footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "eyebrow_pt": "LITERATURA",
+  "eyebrow_en": "LITERATURE",
+  "title_pt": "Escrita",
+  "title_en": "Writing",
+  "items": [
+    {
+      "title": "Um Brinde às Trevas",
+      "meta": "THRILLER · UBOOK",
+      "cover": "/images/um-brinde-as-trevas.jpg",
+      "description_pt": "Thriller publicado pela UBOOK.",
+      "description_en": "Thriller published by UBOOK.",
+      "url": "https://www.amazon.com.br/Um-brinde-trevas-Caio-Cobra-ebook/dp/B0CW18VSJZ/",
+      "button_pt": "Ver livro ↗",
+      "button_en": "View book ↗"
+    }
+  ]
+}

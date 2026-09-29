@@ -1,0 +1,174 @@
+backend:
+  name: github
+  repo: caioncobra-cpu/caio-cobra-site
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+locale: "pt"
+
+collections:
+  - name: "configuracao"
+    label: "Configuração do site"
+    files:
+      - name: "settings"
+        label: "Início e navegação"
+        file: "data/settings.json"
+        format: "json"
+        fields:
+          - {label: "Nome do site", name: "site_name", widget: "string"}
+          - {label: "Título da página PT", name: "page_title_pt", widget: "string"}
+          - {label: "Título da página EN", name: "page_title_en", widget: "string"}
+          - {label: "Descrição Google PT", name: "meta_description_pt", widget: "text"}
+          - {label: "Descrição Google EN", name: "meta_description_en", widget: "text"}
+          - label: "Navegação"
+            name: "nav"
+            widget: "object"
+            fields:
+              - {label: "Direção PT", name: "directing_pt", widget: "string"}
+              - {label: "Direção EN", name: "directing_en", widget: "string"}
+              - {label: "Escrita PT", name: "writing_pt", widget: "string"}
+              - {label: "Escrita EN", name: "writing_en", widget: "string"}
+              - {label: "Textos PT", name: "texts_pt", widget: "string"}
+              - {label: "Textos EN", name: "texts_en", widget: "string"}
+              - {label: "Imprensa PT", name: "press_pt", widget: "string"}
+              - {label: "Imprensa EN", name: "press_en", widget: "string"}
+              - {label: "Sobre PT", name: "about_pt", widget: "string"}
+              - {label: "Sobre EN", name: "about_en", widget: "string"}
+              - {label: "Contato PT", name: "contact_pt", widget: "string"}
+              - {label: "Contato EN", name: "contact_en", widget: "string"}
+          - label: "Home"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Linha superior PT", name: "eyebrow_pt", widget: "string"}
+              - {label: "Linha superior EN", name: "eyebrow_en", widget: "string"}
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Subtítulo PT", name: "subtitle_pt", widget: "string"}
+              - {label: "Subtítulo EN", name: "subtitle_en", widget: "string"}
+              - {label: "Botão PT", name: "button_pt", widget: "string"}
+              - {label: "Botão EN", name: "button_en", widget: "string"}
+
+      - name: "films"
+        label: "Filmes / Direção"
+        file: "data/films.json"
+        format: "json"
+        fields:
+          - {label: "Linha superior PT", name: "eyebrow_pt", widget: "string"}
+          - {label: "Linha superior EN", name: "eyebrow_en", widget: "string"}
+          - {label: "Título PT", name: "title_pt", widget: "string"}
+          - {label: "Título EN", name: "title_en", widget: "string"}
+          - label: "Filmes"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.year}}"
+            fields:
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Tipo PT", name: "type_pt", widget: "string"}
+              - {label: "Tipo EN", name: "type_en", widget: "string"}
+              - {label: "Ano", name: "year", widget: "string"}
+              - {label: "Pôster", name: "poster", widget: "image"}
+              - {label: "Link do trailer", name: "trailer", widget: "string"}
+              - {label: "Texto do botão PT", name: "button_pt", widget: "string"}
+              - {label: "Texto do botão EN", name: "button_en", widget: "string"}
+
+      - name: "writing"
+        label: "Escrita / Livros"
+        file: "data/writing.json"
+        format: "json"
+        fields:
+          - {label: "Linha superior PT", name: "eyebrow_pt", widget: "string"}
+          - {label: "Linha superior EN", name: "eyebrow_en", widget: "string"}
+          - {label: "Título PT", name: "title_pt", widget: "string"}
+          - {label: "Título EN", name: "title_en", widget: "string"}
+          - label: "Livros / obras"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Meta / categoria", name: "meta", widget: "string"}
+              - {label: "Capa", name: "cover", widget: "image"}
+              - {label: "Descrição PT", name: "description_pt", widget: "text"}
+              - {label: "Descrição EN", name: "description_en", widget: "text"}
+              - {label: "Link", name: "url", widget: "string"}
+              - {label: "Botão PT", name: "button_pt", widget: "string"}
+              - {label: "Botão EN", name: "button_en", widget: "string"}
+
+      - name: "texts"
+        label: "Textos"
+        file: "data/texts.json"
+        format: "json"
+        fields:
+          - {label: "Linha superior PT", name: "eyebrow_pt", widget: "string"}
+          - {label: "Linha superior EN", name: "eyebrow_en", widget: "string"}
+          - {label: "Título PT", name: "title_pt", widget: "string"}
+          - {label: "Título EN", name: "title_en", widget: "string"}
+          - {label: "Introdução PT", name: "intro_pt", widget: "text"}
+          - {label: "Introdução EN", name: "intro_en", widget: "text"}
+          - label: "Textos publicados"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.titulo_pt}}"
+            fields:
+              - {label: "Identificador (sem espaços)", name: "id", widget: "string", hint: "Ex.: cinema-e-medo"}
+              - {label: "Publicado", name: "publicado", widget: "boolean", default: true}
+              - {label: "Data", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
+              - {label: "Título PT", name: "titulo_pt", widget: "string"}
+              - {label: "Título EN", name: "titulo_en", widget: "string", required: false}
+              - {label: "Resumo PT", name: "resumo_pt", widget: "text"}
+              - {label: "Resumo EN", name: "resumo_en", widget: "text", required: false}
+              - {label: "Texto completo PT", name: "conteudo_pt", widget: "text"}
+              - {label: "Texto completo EN", name: "conteudo_en", widget: "text", required: false}
+
+      - name: "press"
+        label: "Imprensa"
+        file: "data/press.json"
+        format: "json"
+        fields:
+          - {label: "Linha superior PT", name: "eyebrow_pt", widget: "string"}
+          - {label: "Linha superior EN", name: "eyebrow_en", widget: "string"}
+          - {label: "Título PT", name: "title_pt", widget: "string"}
+          - {label: "Título EN", name: "title_en", widget: "string"}
+          - label: "Matérias e vídeos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.source}} — {{fields.title_pt}}"
+            fields:
+              - {label: "Veículo", name: "source", widget: "string"}
+              - {label: "Título PT", name: "title_pt", widget: "string"}
+              - {label: "Título EN", name: "title_en", widget: "string"}
+              - {label: "Link", name: "url", widget: "string"}
+
+      - name: "about"
+        label: "Sobre / Bio"
+        file: "data/about.json"
+        format: "json"
+        fields:
+          - {label: "Linha superior", name: "eyebrow", widget: "string"}
+          - {label: "Título PT", name: "title_pt", widget: "string"}
+          - {label: "Título EN", name: "title_en", widget: "string"}
+          - {label: "Foto", name: "portrait", widget: "image"}
+          - label: "Parágrafos"
+            name: "paragraphs"
+            widget: "list"
+            fields:
+              - {label: "Português", name: "pt", widget: "text"}
+              - {label: "English", name: "en", widget: "text"}
+
+      - name: "contact"
+        label: "Contato"
+        file: "data/contact.json"
+        format: "json"
+        fields:
+          - {label: "Linha superior PT", name: "eyebrow_pt", widget: "string"}
+          - {label: "Linha superior EN", name: "eyebrow_en", widget: "string"}
+          - {label: "Introdução PT", name: "intro_pt", widget: "string"}
+          - {label: "Introdução EN", name: "intro_en", widget: "string"}
+          - {label: "E-mail", name: "email", widget: "string"}
+          - label: "Redes / links"
+            name: "links"
+            widget: "list"
+            fields:
+              - {label: "Nome", name: "label", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}

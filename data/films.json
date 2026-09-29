@@ -1,0 +1,38 @@
+{
+  "eyebrow_pt": "FILMOGRAFIA",
+  "eyebrow_en": "FILMOGRAPHY",
+  "title_pt": "Direção",
+  "title_en": "Directing",
+  "items": [
+    {
+      "title": "Intervenção",
+      "type_pt": "FICÇÃO",
+      "type_en": "FICTION",
+      "year": "2019",
+      "poster": "/images/intervencao.jpg",
+      "trailer": "https://www.youtube.com/watch?v=qQb2W-Nj9vs",
+      "button_pt": "Trailer no YouTube ↗",
+      "button_en": "Trailer on YouTube ↗"
+    },
+    {
+      "title": "Sobrevivi ao Holocausto",
+      "type_pt": "DOCUMENTÁRIO",
+      "type_en": "DOCUMENTARY",
+      "year": "2014",
+      "poster": "/images/sobrevivi-holocausto.jpg",
+      "trailer": "https://www.youtube.com/watch?v=iBXewSph1uA",
+      "button_pt": "Trailer no YouTube ↗",
+      "button_en": "Trailer on YouTube ↗"
+    },
+    {
+      "title": "Virando a Mesa",
+      "type_pt": "FICÇÃO",
+      "type_en": "FICTION",
+      "year": "2021",
+      "poster": "/images/virando-a-mesa.jpg",
+      "trailer": "https://www.youtube.com/watch?v=yXdwvgUjl3Y",
+      "button_pt": "Trailer no YouTube ↗",
+      "button_en": "Trailer on YouTube ↗"
+    }
+  ]
+}

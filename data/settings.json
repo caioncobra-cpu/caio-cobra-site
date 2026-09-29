@@ -1,0 +1,30 @@
+{
+  "site_name": "CAIO COBRA",
+  "page_title_pt": "Caio Cobra — Cinema e escrita",
+  "page_title_en": "Caio Cobra — Film and writing",
+  "meta_description_pt": "Portfólio de Caio Cobra — diretor, roteirista e escritor.",
+  "meta_description_en": "Portfolio of Caio Cobra — director, screenwriter and writer.",
+  "nav": {
+    "directing_pt": "Direção",
+    "directing_en": "Directing",
+    "writing_pt": "Escrita",
+    "writing_en": "Writing",
+    "texts_pt": "Textos",
+    "texts_en": "Texts",
+    "press_pt": "Imprensa",
+    "press_en": "Press",
+    "about_pt": "Sobre",
+    "about_en": "About",
+    "contact_pt": "Contato",
+    "contact_en": "Contact"
+  },
+  "hero": {
+    "eyebrow_pt": "DIRETOR · ROTEIRISTA · ESCRITOR",
+    "eyebrow_en": "DIRECTOR · SCREENWRITER · WRITER",
+    "name": "Caio Cobra",
+    "subtitle_pt": "Cinema e escrita",
+    "subtitle_en": "Film and writing",
+    "button_pt": "Ver trabalhos",
+    "button_en": "View work"
+  }
+}

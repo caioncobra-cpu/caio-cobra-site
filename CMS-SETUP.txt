@@ -1,0 +1,42 @@
+CAIO COBRA — V11 CMS COMPLETO
+
+O SITE
+- Continua estático e rápido no Netlify.
+- Todo o conteúdo visível vem dos arquivos JSON em /data.
+- O painel /admin usa Decap CMS.
+- Depois da configuração GitHub + Netlify, o botão Publicar do painel grava no GitHub.
+- O Netlify detecta a alteração e publica a nova versão automaticamente.
+
+O QUE PODE SER EDITADO NO PAINEL
+- Início: nome, subtítulo, menu, textos PT/EN
+- Filmes: adicionar, remover, ordenar, trocar pôster, trailer, ano e categoria
+- Escrita: livros/obras, capa, descrição, links
+- Textos: criar, editar, publicar/rascunho, PT/EN
+- Imprensa: veículo, título, URL
+- Sobre: bio e foto
+- Contato: e-mail e redes sociais
+
+CONFIGURAÇÃO ÚNICA NECESSÁRIA
+1. Crie uma conta no GitHub (se ainda não tiver).
+2. Crie um repositório chamado, por exemplo: caio-cobra-site.
+3. Envie todo o conteúdo desta pasta para o repositório.
+4. Em admin/config.yml, substitua:
+   caioncobra-cpu/caio-cobra-site
+   pelo nome real do seu usuário/repositório.
+5. No Netlify, conecte o projeto existente a esse repositório GitHub.
+6. No GitHub, crie uma OAuth App:
+   - Homepage URL: https://caiocobra.com.br
+   - Authorization callback URL: https://api.netlify.com/auth/done
+7. Copie Client ID e Client Secret.
+8. No Netlify:
+   Project configuration > Access & security > OAuth > Authentication providers
+   Instale/configure o GitHub com o Client ID e Client Secret.
+9. Abra:
+   https://caiocobra.com.br/admin/
+10. Entre com sua conta GitHub.
+
+A PARTIR DAÍ
+Edite no painel e clique em Publicar. Não é necessário baixar JSON nem reenviar ZIP.
+
+OBSERVAÇÃO
+O backend escolhido é GitHub direto, em vez do antigo Git Gateway do Netlify.

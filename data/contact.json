@@ -1,0 +1,17 @@
+{
+  "eyebrow_pt": "CONTATO",
+  "eyebrow_en": "CONTACT",
+  "intro_pt": "Para trabalhos, colaborações e projetos:",
+  "intro_en": "For work, collaborations and projects:",
+  "email": "caio@caiocobra.com.br",
+  "links": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/caiocobra_/"
+    },
+    {
+      "label": "IMDb",
+      "url": "https://www.imdb.com/pt/name/nm2815063/"
+    }
+  ]
+}
