@@ -5,6 +5,13 @@
   "title_en": "Directing",
   "items": [
     {
+      "title": "Pacto Maldito",
+      "type_pt": "FICÇÃO",
+      "type_en": "FICTION",
+      "year": "EM BREVE",
+      "poster": "/images/uploads/imagem-do-chatgpt-29-de-set.-de-2026-13_28_45.png"
+    },
+    {
       "title": "Intervenção",
       "type_pt": "FICÇÃO",
       "type_en": "FICTION",
@@ -33,13 +40,6 @@
       "trailer": "https://www.youtube.com/watch?v=yXdwvgUjl3Y",
       "button_pt": "Trailer no YouTube ↗",
       "button_en": "Trailer on YouTube ↗"
-    },
-    {
-      "title": "Pacto Maldito",
-      "type_pt": "FICÇÃO",
-      "type_en": "FICTION",
-      "year": "EM BREVE",
-      "poster": "/images/uploads/04_preto.jpg"
     }
   ]
 }
