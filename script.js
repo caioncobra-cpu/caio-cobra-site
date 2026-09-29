@@ -57,18 +57,31 @@ function render() {
   const f = DATA.films;
   document.getElementById('films-heading').innerHTML =
     `<p class="eyebrow">${esc(pick(f,'eyebrow'))}</p><h2>${esc(pick(f,'title'))}</h2>`;
-  document.getElementById('films-list').innerHTML = (f.items || []).map(item => `
-    <article class="film-card">
-      <a class="poster-link" href="${esc(item.trailer)}" target="_blank" rel="noopener">
-        <img src="${esc(item.poster)}" alt="${esc(item.title)}">
-        <span class="watch">${currentLanguage==='en'?'Watch trailer ↗':'Ver trailer ↗'}</span>
-      </a>
+  document.getElementById('films-list').innerHTML = (f.items || []).map(item => {
+    const hasTrailer = Boolean((item.trailer || '').trim());
+    const poster = hasTrailer
+      ? `<a class="poster-link" href="${esc(item.trailer)}" target="_blank" rel="noopener">
+          <img src="${esc(item.poster)}" alt="${esc(item.title)}">
+          <span class="watch">${currentLanguage==='en'?'Watch trailer ↗':'Ver trailer ↗'}</span>
+        </a>`
+      : `<div class="poster-link no-link">
+          <img src="${esc(item.poster)}" alt="${esc(item.title)}">
+        </div>`;
+
+    const buttonText = pick(item,'button') || (currentLanguage === 'en' ? 'Watch trailer ↗' : 'Ver trailer ↗');
+    const trailerLink = hasTrailer
+      ? `<a class="text-link" href="${esc(item.trailer)}" target="_blank" rel="noopener">${esc(buttonText)}</a>`
+      : '';
+
+    return `<article class="film-card">
+      ${poster}
       <div class="film-info">
         <p class="meta">${esc(pick(item,'type'))} · ${esc(item.year)}</p>
         <h3>${esc(item.title)}</h3>
-        <a class="text-link" href="${esc(item.trailer)}" target="_blank" rel="noopener">${esc(pick(item,'button'))}</a>
+        ${trailerLink}
       </div>
-    </article>`).join('');
+    </article>`;
+  }).join('');
 
   const w = DATA.writing;
   document.getElementById('writing-heading').innerHTML =
