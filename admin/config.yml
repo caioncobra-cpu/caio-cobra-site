@@ -68,9 +68,9 @@ collections:
               - {label: "Tipo EN", name: "type_en", widget: "string"}
               - {label: "Ano", name: "year", widget: "string"}
               - {label: "Pôster", name: "poster", widget: "image"}
-              - {label: "Link do trailer", name: "trailer", widget: "string"}
-              - {label: "Texto do botão PT", name: "button_pt", widget: "string"}
-              - {label: "Texto do botão EN", name: "button_en", widget: "string"}
+              - {label: "Link do trailer", name: "trailer", widget: "string", required: false, hint: "Deixe em branco se o filme ainda não tiver trailer."}
+              - {label: "Texto do botão PT", name: "button_pt", widget: "string", required: false, hint: "Opcional. Só é usado quando houver trailer."}
+              - {label: "Texto do botão EN", name: "button_en", widget: "string", required: false, hint: "Opcional. Só é usado quando houver trailer."}
 
       - name: "writing"
         label: "Escrita / Livros"
