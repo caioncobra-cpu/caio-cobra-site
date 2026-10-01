@@ -236,12 +236,15 @@ function renderArticle() {
     .map(p => `<p>${esc(p).replace(/\n/g,'<br>')}</p>`).join('');
   const shareLabel = currentLanguage === 'en' ? 'Share' : 'Compartilhar';
   const copyLabel = currentLanguage === 'en' ? 'Copy link' : 'Copiar link';
+  const articleImage = (item.imagem || '').trim()
+    ? `<figure class="article-image"><img src="${esc(item.imagem)}" alt="${esc(title)}"></figure>`
+    : '';
 
   root.innerHTML = `<section class="article-header"><div class="article-header-inner">
     <a class="back-link" href="../index.html#textos">${currentLanguage==='en'?'← Back to Texts':'← Voltar para Textos'}</a>
     <p class="eyebrow">${esc(fmtDate(item.data))}</p>
     <h1>${esc(title)}</h1><p class="article-deck">${esc(resumo)}</p>
-  </div></section><article class="article-body">${paragraphs}
+  </div></section>${articleImage}<article class="article-body">${paragraphs}
     <div class="article-share">
       <p class="article-share-label">${shareLabel}</p>
       <div class="article-share-actions">
