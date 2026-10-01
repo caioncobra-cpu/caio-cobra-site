@@ -5,6 +5,12 @@
   "title_en": "Press",
   "items": [
     {
+      "source": "Omeleteve",
+      "title_pt": "PACTO MALDITO na CCXP25! | Palco Omelete by BB",
+      "title_en": "PACTO MALDITO at CCXP25! | Omelete Stage by BB",
+      "url": "https://www.youtube.com/watch?v=31fLy7FhHMc&t=109s"
+    },
+    {
       "source": "Geek Pop News",
       "title_pt": "Pacto Maldito — novo filme de terror brasileiro",
       "title_en": "Pacto Maldito — new Brazilian horror film",
@@ -15,6 +21,12 @@
       "title_pt": "Terror feito no Brasil e CCXP",
       "title_en": "Brazilian horror and CCXP",
       "url": "https://timesbrasil.com.br/entretenimento/terror-feito-no-brasil-tenta-romper-barreiras-de-consumo-com-ajuda-da-ccxp25/"
+    },
+    {
+      "source": "Variety",
+      "title_pt": "Fremantle e Globo coproduzirão e distribuirão a série dramática brasileira ‘Crime Inc’.",
+      "title_en": "Fremantle, Globo to Co-Produce, Distribute Brazilian Drama Series ‘Crime Inc’",
+      "url": "https://variety.com/2024/tv/global/fremantle-globo-co-produce-crime-inc-1236189422/"
     },
     {
       "source": "Plano Crítico",
@@ -39,12 +51,6 @@
       "title_pt": "Entrevista Nany Cast",
       "title_en": "Nany Cast Interview",
       "url": "https://www.youtube.com/watch?v=CHdAbHOpMKQ"
-    },
-    {
-      "source": "Omeleteve",
-      "title_pt": "PACTO MALDITO na CCXP25! | Palco Omelete by BB",
-      "title_en": "PACTO MALDITO at CCXP25! | Omelete Stage by BB",
-      "url": "https://www.youtube.com/watch?v=31fLy7FhHMc&t=109s"
     }
   ]
 }
