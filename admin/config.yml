@@ -116,6 +116,7 @@ collections:
               - {label: "Data", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
               - {label: "Título PT", name: "titulo_pt", widget: "string"}
               - {label: "Título EN", name: "titulo_en", widget: "string", required: false}
+              - {label: "Imagem do texto", name: "imagem", widget: "image", required: false, hint: "Opcional. Aparece apenas dentro da página do texto."}
               - {label: "Resumo PT", name: "resumo_pt", widget: "text"}
               - {label: "Resumo EN", name: "resumo_en", widget: "text", required: false}
               - {label: "Texto completo PT", name: "conteudo_pt", widget: "text"}
