@@ -234,11 +234,92 @@ function renderArticle() {
   document.title = `${title} — ${DATA.settings.hero.name}`;
   const paragraphs = String(content || '').split(/\n\s*\n/).filter(Boolean)
     .map(p => `<p>${esc(p).replace(/\n/g,'<br>')}</p>`).join('');
+  const shareLabel = currentLanguage === 'en' ? 'Share' : 'Compartilhar';
+  const copyLabel = currentLanguage === 'en' ? 'Copy link' : 'Copiar link';
+
   root.innerHTML = `<section class="article-header"><div class="article-header-inner">
     <a class="back-link" href="../index.html#textos">${currentLanguage==='en'?'← Back to Texts':'← Voltar para Textos'}</a>
     <p class="eyebrow">${esc(fmtDate(item.data))}</p>
     <h1>${esc(title)}</h1><p class="article-deck">${esc(resumo)}</p>
-  </div></section><article class="article-body">${paragraphs}</article>`;
+  </div></section><article class="article-body">${paragraphs}
+    <div class="article-share">
+      <p class="article-share-label">${shareLabel}</p>
+      <div class="article-share-actions">
+        <button class="article-share-button" id="article-share-btn" type="button">${shareLabel} ↗</button>
+        <button class="article-copy-button" id="article-copy-btn" type="button">${copyLabel}</button>
+      </div>
+      <p class="article-share-feedback" id="article-share-feedback" aria-live="polite"></p>
+    </div>
+  </article>`;
+
+  bindArticleShare(title);
+}
+
+async function copyArticleLink() {
+  const url = window.location.href;
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(url);
+    return;
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = url;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  textarea.remove();
+}
+
+function bindArticleShare(title) {
+  const shareButton = document.getElementById('article-share-btn');
+  const copyButton = document.getElementById('article-copy-btn');
+  const feedback = document.getElementById('article-share-feedback');
+  if (!shareButton || !copyButton) return;
+
+  const setFeedback = (message) => {
+    if (!feedback) return;
+    feedback.textContent = message;
+    window.clearTimeout(setFeedback.timeoutId);
+    setFeedback.timeoutId = window.setTimeout(() => { feedback.textContent = ''; }, 2600);
+  };
+
+  shareButton.addEventListener('click', async () => {
+    const shareData = {
+      title: `${title} — ${DATA.settings.hero.name}`,
+      text: title,
+      url: window.location.href
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+        return;
+      } catch (err) {
+        if (err?.name === 'AbortError') return;
+      }
+    }
+
+    try {
+      await copyArticleLink();
+      setFeedback(currentLanguage === 'en' ? 'Link copied.' : 'Link copiado.');
+    } catch (err) {
+      console.error(err);
+      setFeedback(currentLanguage === 'en' ? 'Could not copy the link.' : 'Não foi possível copiar o link.');
+    }
+  });
+
+  copyButton.addEventListener('click', async () => {
+    try {
+      await copyArticleLink();
+      setFeedback(currentLanguage === 'en' ? 'Link copied.' : 'Link copiado.');
+    } catch (err) {
+      console.error(err);
+      setFeedback(currentLanguage === 'en' ? 'Could not copy the link.' : 'Não foi possível copiar o link.');
+    }
+  });
 }
 
 loadAll().catch(err => {
