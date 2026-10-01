@@ -75,6 +75,8 @@ footer{padding:2rem 7vw;border-top:1px solid var(--line);color:#777;font-size:.7
 .article-header-inner{max-width:980px;margin:0 auto}
 .article-header h1{white-space:normal;font-size:clamp(3.8rem,8vw,7.8rem);line-height:.9;margin:1rem 0 2rem}
 .article-deck{max-width:760px;color:var(--muted);font-size:1.18rem;line-height:1.75}
+.article-image{max-width:1120px;margin:5rem auto 0;padding:0 2rem}
+.article-image img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;background:#0b0b0b}
 .article-body{max-width:760px;margin:0 auto;padding:5rem 2rem 8rem}
 .article-body p{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.45rem;line-height:1.8;color:#d7d3cb}
 .article-placeholder{padding:2rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted);font-family:Inter,Arial,sans-serif!important;font-size:.95rem!important}
